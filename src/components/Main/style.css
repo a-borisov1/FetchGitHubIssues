@@ -1,0 +1,41 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(241, 239, 239);
+  padding: 0.25rem;
+}
+
+.label_list {
+  display: flex;
+}
+
+.label {
+  text-align: center;
+  margin: 0 0.25rem;
+  padding: 0 7px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+
+  color: #000000;
+  width: fit-content;
+}
+
+.wrapper {
+  position: relative;
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
