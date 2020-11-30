@@ -1,5 +1,5 @@
 ---
-permalink: /index.html
+permalink: /build/index.html
 ---
 
 # Getting Started with Create React App
