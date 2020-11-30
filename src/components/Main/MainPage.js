@@ -8,7 +8,7 @@ import './style.css';
 
 export const MainPage = () => {
   const { Option } = AutoComplete;
-  console.log(process.env.REACT_APP_GITHUB_ACCESS_TOKEN);
+
   const [searchValue, setSearchValue] = useState('');
   const GET_VIEW = gql`
 query {
