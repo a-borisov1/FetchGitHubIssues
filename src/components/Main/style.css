@@ -34,7 +34,8 @@
 
 .wrapper {
   position: relative;
-  width: 85%;
+  width: 40%;
+  min-width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;

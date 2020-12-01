@@ -43,7 +43,7 @@ query {
   };
 
   const handlePress = (value) => {
-    window.open(value);
+    if (value !== null) window.open(value);
   };
 
   if (error) return `Error! ${error.message}`;
@@ -62,7 +62,8 @@ query {
           onSelect={handlePress}
           allowClear
         >
-          {searchValue.length > 1 &&
+          {res && res?.length > 0 ? (
+            searchValue.length > 1 &&
             res?.map((item) => (
               <Option key={item.url} value={item.url}>
                 <div className="item">
@@ -82,7 +83,12 @@ query {
                   </div>
                 </div>
               </Option>
-            ))}
+            ))
+          ) : (
+            <Option>
+              <span onClick={(e) => e.preventDefault()}>No results found</span>
+            </Option>
+          )}
         </AutoComplete>
         {loading && (
           <Spin style={{ position: 'absolute', right: '9px', top: '5px' }} />
