@@ -42,9 +42,8 @@ query {
     setSearchValue(value);
   };
 
-  const handleClick = (url) => {
-    setSearchValue('');
-    window.open(url);
+  const handlePress = (value) => {
+    window.open(value);
   };
 
   if (error) return `Error! ${error.message}`;
@@ -60,11 +59,13 @@ query {
           onSearch={handleSearch}
           placeholder="input here"
           value={searchValue}
+          onSelect={handlePress}
+          allowClear
         >
           {searchValue.length > 1 &&
             res?.map((item) => (
-              <Option key={item.url} value={item.title}>
-                <div className="item" onClick={() => handleClick(item.url)}>
+              <Option key={item.url} value={item.url}>
+                <div className="item">
                   {item.title}
                   <div className="label_list">
                     {item.labels.edges.map((label) => (
