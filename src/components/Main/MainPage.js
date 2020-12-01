@@ -85,7 +85,7 @@ query {
             ))}
         </AutoComplete>
         {loading && (
-          <Spin style={{ position: 'absolute', right: '1%', top: '5px' }} />
+          <Spin style={{ position: 'absolute', right: '9px', top: '5px' }} />
         )}
       </div>
     </div>
